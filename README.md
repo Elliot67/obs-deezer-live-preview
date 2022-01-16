@@ -1,7 +1,7 @@
 <h1 align="center">OBS Deeezer live preview</h1>
 <p align="center">OBS Studio live preview of your Deezer music</p>
 
-<p align="center"><img width="100%" src="./.repo/widget-preview.jpg" alt="Widget preview"></p>
+<p align="center"><img src="./.repo/widget-preview.jpg" alt="Widget preview"></p>
 
 ## Installation
 

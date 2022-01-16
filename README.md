@@ -11,7 +11,8 @@
 
 ### How to find your Deezer userId & token
 
-// TODO
+- The Deezer documentation explains [how to find your userID](https://support.deezer.com/hc/en-gb/articles/360016118958-Managing-your-Deezer-information).
+- The token is harder to get since the `Get Token` button in the Deezer documentation isn't working 🤷‍♂️. I made [a video]() showing the steps to retrieve the token with Browsers DevTools.
 
 ## Customize the player
 
@@ -31,10 +32,6 @@ You can freely edit the `index.html` & `style.css` files to match your desired d
 ```html
 <img data-api="album.cover" data-attr="src" />
 ```
-
-### Possible issues
-
-- In order to use the Deezer API in the browser, each request needs to pass through a CORS Proxy. If the proxy gets down, you will encounter errors. You can configure another CORS proxy in the `env.js` file.
 
 ### Disclaimer
 

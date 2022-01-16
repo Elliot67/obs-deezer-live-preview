@@ -9,12 +9,22 @@ const tryJson = (json) => {
 };
 
 class Deezer {
-  static getSongInformations = async (songId) => {
-    const response = await axios(`${window.env.CORS_PROXY}https://api.deezer.com/track/${songId}`, {
-      headers: {},
+  static getSongInformations(songId) {
+    return new Promise((resolve, reject) => {
+      let script = document.createElement("script");
+      script.type = "text/javascript";
+      const callbackName = "callback" + Math.random().toString(36).substr(2, 5);
+      script.dataset.callbackId = callbackName;
+      window[callbackName] = (response) => {
+        script.remove();
+        resolve(response);
+        delete window[callbackName];
+        console.log("postet");
+      };
+      script.src = `https://api.deezer.com/track/${songId}?output=jsonp&version=js-v1.0.0&callback=${callbackName}`;
+      document.querySelector("body").append(script);
     });
-    return response.data;
-  };
+  }
 
   constructor(username, token) {
     this.username = username;
@@ -51,8 +61,8 @@ class Deezer {
 
 const onTrackChanged = async (songId) => {
   console.log("songId changed", songId);
-  const song = await Deezer.getSongInformations(songId);
-  renderSongInformations(song);
+  const data = await Deezer.getSongInformations(songId);
+  renderSongInformations(data);
 };
 
 const renderSongInformations = (data) => {

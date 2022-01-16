@@ -12,7 +12,9 @@
 ### How to find your Deezer userId & token
 
 - The Deezer documentation explains [how to find your userID](https://support.deezer.com/hc/en-gb/articles/360016118958-Managing-your-Deezer-information).
-- The token is harder to get since the `Get Token` button in the Deezer documentation isn't working 🤷‍♂️. I made [a video]() showing the steps to retrieve the token with Browsers DevTools.
+- The token is harder to get since the `Get Token` button in the Deezer documentation isn't working 🤷‍♂️. I made a simple video below showing the steps to retrieve the token with Browsers DevTools.
+
+https://user-images.githubusercontent.com/45725915/149678720-69e8b907-5305-4798-8c41-8bbbca654359.mp4
 
 ## Customize the player
 

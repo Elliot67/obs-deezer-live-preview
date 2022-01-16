@@ -73,7 +73,9 @@ const renderSongInformations = (data) => {
     const apiKey = el.dataset.api.split(".");
     let value = data;
     apiKey.forEach((key) => {
-      value = value?.[key];
+      if (value) {
+        value = value[key]; 
+      }
     });
 
     const replaceAttr = el.dataset.attr;

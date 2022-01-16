@@ -1,3 +1,19 @@
-.Player {
-    
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+#player {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  grid-gap: 20px;
+}
+
+.musicName {
+  font-size: 40px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.author {
+  font-size: 20px;
+  white-space: nowrap;
 }

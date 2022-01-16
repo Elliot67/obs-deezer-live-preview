@@ -1,11 +1,14 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
   <body>
     <div id="player">
-      <div class="cover" data-api="album.cover"></div>
       <img src="" data-api="album.cover" data-attr="src" />
-      <div class="musicName" data-api="title"></div>
-      <div class="author" data-api="artist.name"></div>
+      <div>
+        <div class="musicName" data-api="title"></div>
+        <div class="author" data-api="artist.name"></div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -18,18 +18,29 @@ https://user-images.githubusercontent.com/45725915/149678720-69e8b907-5305-4798-
 
 ## Customize the player
 
-You can freely edit the `index.html` & `style.css` files to match your desired design.
+You can customize your player by setting a different theme name in your `env.js` configuration file.
 
-- If you want to show more information in the HTML, you just need to provide an additionnal `data-api` attribute on your element with its corresponding path in the API response.
-- If you need to set a special html attribute like `src` for images, you can do so by specifying the attribute with `data-attr`.
+There is currently only a single theme available : `default`.
 
-### Showing the album title as text inside the HTML element
+### Small modifications
+
+To apply tiny changes, you can edit `index.html` and the theme stylesheet in `themes/_THEME_NAME_.css`. If you simply need to override CSS rules, you can use the `override.css` file.
+
+### Theme devlopment
+
+If you have some basic knowledge about HTML & CSS you can easily create your own theme.
+
+1. Create your player container inside the `<section id="themes">` with a `<template data-theme-name="_THEME_NAME_"></template>` tag.
+2. Create your stylesheet file in `themes/_THEME_NAME_.css`.
+3. Change the selected theme in the configuration file `env.js`.
+
+To show API informations in your container, you have to provide an additionnal `data-api` attribute on your HTML elements with the corresponding path in the API response to access the desired data.
 
 ```html
 <div data-api="album.title"></div>
 ```
 
-### Showing the album image inside an element
+If you need to set a special html attribute like `src` for images, you can do so by specifying the attribute with `data-attr`.
 
 ```html
 <img data-api="album.cover" data-attr="src" />

@@ -1,19 +1,28 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./override.css" />
   </head>
   <body>
-    <div id="player">
-      <img src="" data-api="album.cover" data-attr="src" />
-      <div>
-        <div class="musicName" data-api="title"></div>
-        <div class="author" data-api="artist.name"></div>
-      </div>
-    </div>
+    <div id="player"></div>
+
+    <section id="themes">
+      <!-- DEFAULT THEME-->
+      <template data-theme-name="default">
+        <div class="container">
+          <img src="" data-api="album.cover" data-attr="src" />
+          <div>
+            <div class="musicName" data-api="title"></div>
+            <div class="author" data-api="artist.name"></div>
+          </div>
+        </div>
+      </template>
+      <!-- ---- -->
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@xmpp/client@0.13.0/dist/xmpp.min.js" crossorigin></script>
     <script src="./env.js"></script>
+    <script src="./theme-loader.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

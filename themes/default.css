@@ -1,6 +1,9 @@
+/***/
+/* THEME : default */
+/***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-#player {
+.container {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
